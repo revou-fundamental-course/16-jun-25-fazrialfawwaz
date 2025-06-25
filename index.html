@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Katik.io</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="icon" href="assets/img/calculator.png" />
+</head>
+<body>
+    <div class="katik-container">
+        <div class="katik-beranda">
+            <img src="assets/img/katik-bg.png" alt="" class="katik-bg-img">
+
+            <div class="katik-card active" id="card-beranda">
+                <div class="katik-title"><img src="assets/img/calculator.png" alt="" class="katik-title-img"> Katik.io</div>
+                <div id="katikSubtitle"></div>
+                <div class="katik-description">Katik.io adalah kalkulator matematika sederhana yang dirancang untuk menghitung luas dan keliling segitiga.</div>
+                <button onclick="showCard('luas')" class="katik-btn">Mulai Menghitung</button>
+            </div>
+
+            <div class="katik-card" id="card-luas">
+                
+                    <div class="katik-luas-btn">
+                        <button onclick="showCard('beranda')" class="katik-btn">Beranda</button>
+                        <button onclick="showCard('keliling')" class="katik-btn">Hitung Keliling</button>
+                    </div>
+                    <div class="katik-title-luas">Luas Segitiga</div>
+                    <img src="assets/img/triangle.png" alt="" class="img-segitiga">
+                    <div class="description">Rumus: L = 1/2 x a x t</div>
+                    <input class="katik-input" id="alas" type="number" placeholder="Masukkan alas (a)">
+                    <input class="katik-input" id="tinggi" type="number" placeholder="Masukkan tinggi (t)">
+                    <input class="katik-hasil" id="luas" placeholder="Hasil" readonly>
+                    <button id="resetBtnLuas" class="katik-btn">Reset</button>
+
+            </div>
+
+            <div class="katik-card" id="card-keliling">
+                
+                    <div class="katik-keliling-btn">
+                        <button onclick="showCard('beranda')" class="katik-btn">Beranda</button>
+                        <button onclick="showCard('luas')" class="katik-btn">Hitung luas</button>
+                    </div>
+                    <div class="katik-title-keliling">Keliling segitiga</div>
+                    <img src="assets/img/triangle.png" alt="" class="img-segitiga">
+                    <div class="description">Rumus: K = Sisi 1 + Sisi 2 + Sisi 3</div>
+                    <input type="number" id="sisiA" class="katik-input" placeholder="Masukan sisi a">
+                    <input type="number" id="sisiB" class="katik-input" placeholder="Masukan sisi b">
+                    <input type="number" id="sisiC" class="katik-input" placeholder="Masukan sisi c">
+                    <input class="katik-hasil" id="keliling" placeholder="Hasil" readonly>
+                    <button id="resetBtnKeliling" class="katik-btn">Reset</button>
+                
+            </div>
+    </div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

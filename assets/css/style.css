@@ -1,0 +1,410 @@
+/* 206°, 100%, 50% */
+/* #0091ff */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Base Style */
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body{
+  font-family: Montserrat;
+  background: #6eddff;
+  color: #333;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+button{
+  border: none;
+  cursor: pointer;
+}
+input{
+  border: none;
+}
+
+/* Katik Style */
+.katik-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.katik-beranda{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 50px;
+  position: absolute;
+}
+.katik-bg-img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 800px;
+  height: 500px;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, .2);
+}
+.katik-card{
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 300px;
+  height: 400px;
+  background-color: hsla(244, 16%, 92%, 0.6);
+  border: 2px solid hsla(244, 16%, 92%, 0.75);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  transform: scale(0.5);
+  -webkit-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  -o-transform: scale(0.5);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 0;
+  gap: 10px;
+}
+.katik-card.active {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 300px;
+  height: 400px;
+  background-color: hsla(244, 16%, 92%, 0.6);
+  border: 2px solid hsla(244, 16%, 92%, 0.75);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  transform: scale(1.05);
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 1;
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+}
+.katik-title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-size: 40px;
+  font-weight: bold;
+  gap: 10px;
+  margin: 0 20px 30px 20px;
+  transition: transform .3s ease;
+  -webkit-transition: transform .3s ease;
+  -moz-transition: transform .3s ease;
+  -ms-transition: transform .3s ease;
+  -o-transition: transform .3s ease;
+  cursor: default;
+}
+.katik-title-img{
+  width: 40px;
+  transition: transform .3s ease;
+  -webkit-transition: transform .3s ease;
+  -moz-transition: transform .3s ease;
+  -ms-transition: transform .3s ease;
+  -o-transition: transform .3s ease;
+}
+.katik-title:hover, .katik-title-img:hover{
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+}
+#katikSubtitle{
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  animation: blink 1s step-start infinite;
+  width: 35ch;
+  height: 1.5em;
+  overflow: hidden;
+  -webkit-animation: blink 1s step-start infinite;
+}
+.katik-description{
+  font-size: 12px;
+  text-align: center;
+  margin: 10px 50px 30px 50px;
+}
+.description{
+  font-size: 12px;
+}
+.katik-btn{
+  background-color: #0091ff;
+  color: white;
+  width: 130px;
+  padding: 10px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  transition: transform .3s ease;
+  -webkit-transition: transform .3s ease;
+  -moz-transition: transform .3s ease;
+  -ms-transition: transform .3s ease;
+  -o-transition: transform .3s ease;
+}
+.katik-btn:hover{
+  background-color: #0087ee;
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+}
+
+.katik-input{
+  font-size: 10px;
+  text-align: center;
+  padding: 10px 30px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+input:focus{
+  outline: 2px solid #0091ff;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.katik-hasil{
+  font-size: 10px;
+  text-align: center;
+  padding: 10px 30px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  cursor: default;
+}
+.katik-luas-btn{
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  margin-top: -50px;
+}
+.katik-title-luas{
+  font-weight: bold;
+}
+.katik-keliling-btn{
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  margin-top: -8px;
+}
+.katik-title-keliling{
+  font-weight: bold;
+}
+.img-segitiga{
+  width: 50px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .katik-beranda{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  }
+  .katik-bg-img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 330px;
+  height: 500px;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, .2);
+  }
+  .katik-card{
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 250px;
+  height: 400px;
+  background-color: hsla(244, 16%, 92%, 0.6);
+  border: 2px solid hsla(244, 16%, 92%, 0.75);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  -webkit-transition: transform 0.4s ease, opacity 0.4s ease;
+  -moz-transition: transform 0.4s ease, opacity 0.4s ease;
+  -ms-transition: transform 0.4s ease, opacity 0.4s ease;
+  -o-transition: transform 0.4s ease, opacity 0.4s ease;
+  transform: scale(0.8);
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  -o-transform: scale(0.8);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 0;
+  gap: 10px;
+  }
+  .katik-card.active{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 250px;
+  height: 400px;
+  background-color: hsla(244, 16%, 92%, 0.6);
+  border: 2px solid hsla(244, 16%, 92%, 0.75);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  -webkit-transition: transform 0.4s ease, opacity 0.4s ease;
+  -moz-transition: transform 0.4s ease, opacity 0.4s ease;
+  -ms-transition: transform 0.4s ease, opacity 0.4s ease;
+  -o-transition: transform 0.4s ease, opacity 0.4s ease;
+  transform: scale(1.05);
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 1;
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  gap: 10px;
+  }
+  .katik-title-img{
+  width: 25px;
+  transition: transform .3s ease;
+  -webkit-transition: transform .3s ease;
+  -moz-transition: transform .3s ease;
+  -ms-transition: transform .3s ease;
+  -o-transition: transform .3s ease;
+  }
+  .katik-title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-size: 30px;
+  font-weight: bold;
+  gap: 10px;
+  margin: 0 20px 20px 20px;
+  transition: transform .3s ease;
+  -webkit-transition: transform .3s ease;
+  -moz-transition: transform .3s ease;
+  -ms-transition: transform .3s ease;
+  -o-transition: transform .3s ease;
+  cursor: default;
+  }
+  #katikSubtitle{
+  text-align: center;
+  font-size: 10px;
+  font-weight: bold;
+  font-style: italic;
+  animation: blink 1s step-start infinite;
+  width: 35ch;
+  height: 1em;
+  overflow: hidden;
+  -webkit-animation: blink 1s step-start infinite;
+  }
+  .katik-btn{
+  background-color: #0091ff;
+  color: white;
+  width: 110px;
+  padding: 10px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  transition: transform .3s ease;
+  -webkit-transition: transform .3s ease;
+  -moz-transition: transform .3s ease;
+  -ms-transition: transform .3s ease;
+  -o-transition: transform .3s ease;
+  font-size: 10px;
+  }
+  .katik-input{
+  font-size: 10px;
+  text-align: center;
+  padding: 10px 25px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  }
+  .katik-hasil{
+  font-size: 10px;
+  text-align: center;
+  padding: 10px 25px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  cursor: default;
+}
+  .katik-luas-btn{
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  margin-top: -80px;
+  }
+  .katik-keliling-btn{
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  margin-top: -40px;
+  }
+  .description{
+    font-size: 8px;
+  }
+  .img-segitiga{
+    width: 40px;
+  }
+}
