@@ -232,7 +232,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 /* Responsive Design */
-@media (max-width: 920px) {
+@media (max-width: 768px) {
   .katik-beranda{
   display: flex;
   flex-direction: column;
